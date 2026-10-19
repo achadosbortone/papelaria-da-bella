@@ -1,1 +1,682 @@
-<p>Em breve.</p>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Papelaria da Bella</title>
+<meta name="description" content="Pintura, scrapbook, adesivos, cadernos e garrafinhas: marcas de confiança, lojas bem avaliadas e o menor preço do Mercado Livre. Atualizado todos os dias.">
+<style>
+  :root{
+    color-scheme:light;
+    --bg:#f5efe3; --card:#fbf8f0; --ink:#2b352b; --muted:#667061; --line:#e0d6bf;
+    --accent:#4f7050; --accent-ink:#ffffff; --hot:#b5543c; --ok:#3b7650; --frame:#ffffff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  header{padding:40px 16px 24px;max-width:1100px;margin:0 auto}
+  h1{font-family:Georgia,'Times New Roman',serif;font-weight:700;margin:0 0 8px;font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.15}
+  .sub{margin:0 0 12px;color:var(--muted);max-width:60ch}
+  .stamp{display:inline-block;font-size:.85rem;color:var(--ok);font-weight:600}
+  nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+  .tabs{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;gap:8px;overflow-x:auto}
+  .tab{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 14px;border-radius:999px;font:inherit;font-size:.9rem;cursor:pointer}
+  .tab[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  main{max-width:1100px;margin:0 auto;padding:8px 16px 48px}
+  section{margin-top:32px}
+  h2{font-size:1.3rem;margin:0 0 14px}
+  .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));grid-auto-rows:1fr}
+  @media (max-width:520px){.grid{grid-template-columns:repeat(2,1fr);gap:10px}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;height:100%}
+  .img{aspect-ratio:4/3;background:var(--frame);position:relative;overflow:hidden;flex:0 0 auto}
+  .img img{position:absolute;inset:0;width:100%;height:100%;padding:8px;object-fit:contain}
+  .off{position:absolute;top:10px;left:10px;background:var(--hot);color:#fff;font-weight:700;font-size:.8rem;padding:3px 8px;border-radius:6px}
+  .body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1}
+  .title{font-size:.85rem;line-height:1.3;height:calc(1.3em * 2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .old{color:var(--muted);text-decoration:line-through;font-size:.85rem;min-height:1.3em}
+  .price{font-size:1.2rem;font-weight:700}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;align-content:flex-start;height:3rem;overflow:hidden}
+  .tag{font-size:.68rem;border:1px solid var(--line);color:var(--muted);padding:2px 7px;border-radius:999px}
+  .tag.ok{color:var(--ok);border-color:var(--ok)}
+  .tag.star{color:var(--accent);border-color:var(--accent)}
+  .crit{margin:0 0 12px;font-size:.85rem;color:var(--accent);letter-spacing:.02em}
+  .btn{margin-top:auto;display:block;text-align:center;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:8px 10px;border-radius:10px;font-size:.9rem}
+  .btn:hover{filter:brightness(1.08)}
+  .empty{color:var(--muted);padding:16px;border:1px dashed var(--line);border-radius:12px}
+  footer{max-width:1100px;margin:0 auto;padding:24px 16px 48px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line)}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header>
+  <h1>Papelaria da Bella</h1>
+  <p class="sub">Pintura, scrapbook, adesivos, cadernos e garrafinhas: marcas de confiança, lojas bem avaliadas e o menor preço do Mercado Livre. Atualizado todos os dias.</p>
+  <p class="crit">Ordem da lista: qualidade do produto · reputação da loja · menor preço</p>
+  <span class="stamp">Atualizado em 19/10/2026 às 10:31</span>
+</header>
+<nav><div class="tabs" id="tabs">
+  <button class="tab" data-cat="todas" aria-pressed="true">Todas</button>
+  <button class="tab" data-cat="pintura-e-arte" aria-pressed="false">Pintura e arte</button>
+  <button class="tab" data-cat="scrapbook-e-papéis" aria-pressed="false">Scrapbook e papéis</button>
+  <button class="tab" data-cat="adesivos-e-washi-tape" aria-pressed="false">Adesivos e washi tape</button>
+  <button class="tab" data-cat="garrafinhas-e-copos" aria-pressed="false">Garrafinhas e copos</button>
+  <button class="tab" data-cat="cadernos--planners-e-agendas" aria-pressed="false">Cadernos, planners e agendas</button>
+  <button class="tab" data-cat="canetas-e-lettering" aria-pressed="false">Canetas e lettering</button>
+</div></nav>
+<main>
+<section data-cat="pintura-e-arte">
+<h2>Pintura e arte</h2>
+<div class="grid">
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_848090-MLA99968240693_112025-F.jpg" alt="Lápis Cor Derwent Drawing 6210 Mars Orange" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Lápis Cor Derwent Drawing 6210 Mars Orange</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 28,31</div>
+    <div class="tags"><span class="tag star">Derwent</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5829037472?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_844674-MLA100088192317_122025-F.jpg" alt="Lapis Cor Derwent Lightfast Mallard Green" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Lapis Cor Derwent Lightfast Mallard Green</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 29,68</div>
+    <div class="tags"><span class="tag star">Derwent</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4969441522?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_964267-MLA99374362028_112025-F.jpg" alt="Lápis Cor Derwent Lightfast Permanente Wheat Un 2302699" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Lápis Cor Derwent Lightfast Permanente Wheat Un 2302699</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 31,64</div>
+    <div class="tags"><span class="tag star">Derwent</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-3802547226?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_918412-MLA99538819716_122025-F.jpg" alt="Marcador Artístico Copic Ciao R20 Blush Ponta Dupla Tinta Álcool" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Marcador Artístico Copic Ciao R20 Blush Ponta Dupla Tinta Álcool</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 37,93</div>
+    <div class="tags"><span class="tag star">Copic</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5406462648?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_712000-MLA99861067467_112025-F.jpg" alt="Aquarela Profissional Winsor &amp; Newton em Pastilha, Vermelho" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Aquarela Profissional Winsor &amp; Newton em Pastilha, Vermelho</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 81,51</div>
+    <div class="tags"><span class="tag star">Winsor &amp; Newton</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5831876744?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_788689-MLA99496418104_112025-F.jpg" alt="Aquarela Profissional Winsor &amp; Newton Laranja em Pastilha" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Aquarela Profissional Winsor &amp; Newton Laranja em Pastilha</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 83,89</div>
+    <div class="tags"><span class="tag star">Winsor &amp; Newton</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4350090630?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_805122-MLA99534276036_122025-F.jpg" alt="Aquarela Profissional Winsor &amp; Newton Laranja, 5 mL" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Aquarela Profissional Winsor &amp; Newton Laranja, 5 mL</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 83,89</div>
+    <div class="tags"><span class="tag star">Winsor &amp; Newton</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4465173754?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_705915-MLA99534235118_122025-F.jpg" alt="Aquarela Profissional Winsor &amp; Newton, Pastilha Winsor Green Blue" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Aquarela Profissional Winsor &amp; Newton, Pastilha Winsor Green Blue</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 83,89</div>
+    <div class="tags"><span class="tag star">Winsor &amp; Newton</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4265818923?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_721325-MLA99418764360_112025-F.jpg" alt="Winsor &amp; Newton Aquarela Profissional Ocre" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Winsor &amp; Newton Aquarela Profissional Ocre</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 86,13</div>
+    <div class="tags"><span class="tag star">Winsor &amp; Newton</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4962444648?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_769374-MLA99534278558_122025-F.jpg" alt="Aquarela Profissional Winsor &amp; Newton Amarelo 5 mL" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Aquarela Profissional Winsor &amp; Newton Amarelo 5 mL</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 88,95</div>
+    <div class="tags"><span class="tag star">Winsor &amp; Newton</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4696020787?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_611772-MLA99454288620_112025-F.jpg" alt="Aquarela Profissional Winsor &amp; Newton, Ocre, 5 mL" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Aquarela Profissional Winsor &amp; Newton, Ocre, 5 mL</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 88,95</div>
+    <div class="tags"><span class="tag star">Winsor &amp; Newton</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4105060443?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_654060-MLA99482249518_112025-F.jpg" alt="Aquarela Profissional Winsor &amp; Newton Watercolour Van Dyke Brown" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Aquarela Profissional Winsor &amp; Newton Watercolour Van Dyke Brown</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 89,49</div>
+    <div class="tags"><span class="tag star">Winsor &amp; Newton</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5829468854?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+</div>
+</section>
+<section data-cat="scrapbook-e-papéis">
+<h2>Scrapbook e papéis</h2>
+<div class="grid">
+<article class="card">
+  <div class="img"><span class="off">-8%</span><img src="https://http2.mlstatic.com/D_NQ_NP_628721-MLA99580353018_122025-F.jpg" alt="Kit Estilete Precisão P/ Patchwork, Scrapbook Artesanato Top" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit Estilete Precisão P/ Patchwork, Scrapbook Artesanato Top</div>
+    <div class="old">R$ 27,99</div>
+    <div class="price">R$ 25,79</div>
+    <div class="tags"><span class="tag star">Lanmax / Westpress</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-3669925647?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><span class="off">-10%</span><img src="https://http2.mlstatic.com/D_NQ_NP_892049-MLA103926278288_012026-F.jpg" alt="Kit Estilete De Precisão Para Artesanato E Scrapbook 17 Pçs" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit Estilete De Precisão Para Artesanato E Scrapbook 17 Pçs</div>
+    <div class="old">R$ 29,90</div>
+    <div class="price">R$ 26,91</div>
+    <div class="tags"><span class="tag star">Artmak/Lanmax/Westpress</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4414125271?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><span class="off">-15%</span><img src="https://http2.mlstatic.com/D_NQ_NP_976101-MLA80314438148_112024-F.jpg" alt="Kit Estilete Precisão Patchwork, Scrapbook Artesanato 17pças" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit Estilete Precisão Patchwork, Scrapbook Artesanato 17pças</div>
+    <div class="old">R$ 33,49</div>
+    <div class="price">R$ 28,46</div>
+    <div class="tags"><span class="tag star">Westpress, Artmak,Lanmax</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-7607426652?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><span class="off">-49%</span><img src="https://http2.mlstatic.com/D_NQ_NP_913401-MLU78836198448_092024-F.jpg" alt="Barbie - Meu kit de Scrapbook - Ciranda Cultural - Capa Mole" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Barbie - Meu kit de Scrapbook - Ciranda Cultural - Capa Mole</div>
+    <div class="old">R$ 64,90</div>
+    <div class="price">R$ 33,15</div>
+    <div class="tags"><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5099866978?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_689107-MLU78458509072_082024-F.jpg" alt="Patrulha Canina - Meu kit de Scrapbook - Ciranda Cultural - Capa Mole" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Patrulha Canina - Meu kit de Scrapbook - Ciranda Cultural - Capa Mole</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 34,68</div>
+    <div class="tags"><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5221891488?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_885260-MLA116984323833_082026-F.jpg" alt="Sonic - Meu kit de Scrapbook - Cardoso, Amanda - Ciranda Cultural" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Sonic - Meu kit de Scrapbook - Cardoso, Amanda - Ciranda Cultural</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 34,90</div>
+    <div class="tags"><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5324223783?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><span class="off">-46%</span><img src="https://http2.mlstatic.com/D_NQ_NP_943128-MLA99846784981_112025-F.jpg" alt="Furador Coração Pequeno BRW 25mm Papel Scrapbook Artesanato" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Furador Coração Pequeno BRW 25mm Papel Scrapbook Artesanato</div>
+    <div class="old">R$ 75,99</div>
+    <div class="price">R$ 40,99</div>
+    <div class="tags"><span class="tag star">BRW</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-3387602517?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_686853-MLU70719490743_072023-F.jpg" alt="Kit De Espátulas - Artesanato Papelaria Convites Scrapbook" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit De Espátulas - Artesanato Papelaria Convites Scrapbook</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 43,83</div>
+    <div class="tags"><span class="tag star">Mimo</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4764397725?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><span class="off">-42%</span><img src="https://http2.mlstatic.com/D_NQ_NP_906846-MLA111659164294_062026-F.jpg" alt="Scrapbook Álbum De Fotos Médio A5 Kraft Capa Dura 50 Páginas Marrom-claro Kit Scrapbook/caneta/adesivo/fita" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Scrapbook Álbum De Fotos Médio A5 Kraft Capa Dura 50 Páginas Marrom-claro Kit Scrapbook/caneta/adesivo/fita</div>
+    <div class="old">R$ 84,99</div>
+    <div class="price">R$ 48,90</div>
+    <div class="tags"><span class="tag star">Nove Horas</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-6993820944?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><span class="off">-38%</span><img src="https://http2.mlstatic.com/D_NQ_NP_922812-MLA110351491055_042026-F.jpg" alt="Kit Scrapbook Namorados Kraft 15x21 Álbum De Fotos Capa Dura Marrom-claro" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit Scrapbook Namorados Kraft 15x21 Álbum De Fotos Capa Dura Marrom-claro</div>
+    <div class="old">R$ 84,99</div>
+    <div class="price">R$ 52,99</div>
+    <div class="tags"><span class="tag star">livro de assinaturas</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4631406121?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><span class="off">-17%</span><img src="https://http2.mlstatic.com/D_NQ_NP_788138-MLA99934918525_112025-F.jpg" alt="Kit Scrapbook Preto + Adesivos Frases + Caneta Gel Branca Memórias Especiais" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit Scrapbook Preto + Adesivos Frases + Caneta Gel Branca Memórias Especiais</div>
+    <div class="old">R$ 64,33</div>
+    <div class="price">R$ 53,62</div>
+    <div class="tags"><span class="tag star">ART7</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4098222779?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><span class="off">-10%</span><img src="https://http2.mlstatic.com/D_NQ_NP_687893-MLA99968758943_112025-F.jpg" alt="Kit Scrapbook Preto + Adesivos Frases + Caneta Gel Branca Memories" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit Scrapbook Preto + Adesivos Frases + Caneta Gel Branca Memories</div>
+    <div class="old">R$ 64,33</div>
+    <div class="price">R$ 57,89</div>
+    <div class="tags"><span class="tag star">ART7</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4096880725?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+</div>
+</section>
+<section data-cat="adesivos-e-washi-tape">
+<h2>Adesivos e washi tape</h2>
+<div class="grid">
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_782228-MLA112893687729_062026-F.jpg" alt="Fita Adesiva Washi Tape 15mmx3m Cup Cake" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Fita Adesiva Washi Tape 15mmx3m Cup Cake</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 20,36</div>
+    <div class="tags"><span class="tag star">Yins Paper</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-7567033282?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_730894-MLA111162804177_052026-F.jpg" alt="Fita Decorativa Washi Tape - Tilibra Cor Lua" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Fita Decorativa Washi Tape - Tilibra Cor Lua</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 24,90</div>
+    <div class="tags"><span class="tag star">Tilibra</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-6709407274?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_915333-MLA111867115626_062026-F.jpg" alt="Kit Washi Tape Organizador 16 Fitas + Furador Chomper We R" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit Washi Tape Organizador 16 Fitas + Furador Chomper We R</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 219,90</div>
+    <div class="tags"><span class="tag star">We R Memory Keepers</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-6935206104?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><span class="off">-3%</span><img src="https://http2.mlstatic.com/D_NQ_NP_979980-MLU74858326903_032024-F.jpg" alt="Kit 3 Fitas Adesivas Washi Tape 15mmx5m Doodles Geométrico" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit 3 Fitas Adesivas Washi Tape 15mmx5m Doodles Geométrico</div>
+    <div class="old">R$ 12,00</div>
+    <div class="price">R$ 11,64</div>
+    <div class="tags"><span class="tag star">Tilibra</span><span class="tag ok">Boa reputação</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5828814516?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_887426-MLA93874304304_102025-F.jpg" alt="Kit 3 Fitas Adesivas Washi Tape 15mmx5m Gypsy" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit 3 Fitas Adesivas Washi Tape 15mmx5m Gypsy</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 16,90</div>
+    <div class="tags"><span class="tag star">Tilibra</span><span class="tag ok">Boa reputação</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5325832554?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_604727-MLA99950039381_112025-F.jpg" alt="Fita Adesiva Decorativa Leonora Washi Tape 50mmx5m Botânico" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Fita Adesiva Decorativa Leonora Washi Tape 50mmx5m Botânico</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 19,20</div>
+    <div class="tags"><span class="tag star">Leonora</span><span class="tag ok">Boa reputação</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5213181458?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><span class="off">-27%</span><img src="https://http2.mlstatic.com/D_NQ_NP_773961-MLA80988175258_122024-F.jpg" alt="Kit Fita Adesiva Washi Tape Coleção 24 Unidades" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit Fita Adesiva Washi Tape Coleção 24 Unidades</div>
+    <div class="old">R$ 69,00</div>
+    <div class="price">R$ 50,71</div>
+    <div class="tags"><span class="tag star">Moure Jar</span><span class="tag ok">Boa reputação</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4475036091?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+</div>
+</section>
+<section data-cat="garrafinhas-e-copos">
+<h2>Garrafinhas e copos</h2>
+<div class="grid">
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_953178-MLA100008910417_122025-F.jpg" alt="Garrafa Termica Lúmina Aço Inox 500ml Cor Garrafa Térmica" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Garrafa Termica Lúmina Aço Inox 500ml Cor Garrafa Térmica</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 78,90</div>
+    <div class="tags"><span class="tag star">Termolar</span><span class="tag ok">MercadoLíder Platinum</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5397858569?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_797540-MLA118951185599_102026-F.jpg" alt="Copo Térmico Termolar Copo Térmico Moove Com Canudo Preto Cinza Degradé" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Copo Térmico Termolar Copo Térmico Moove Com Canudo Preto Cinza Degradé</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 180,90</div>
+    <div class="tags"><span class="tag star">Termolar</span><span class="tag ok">Boa reputação</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-7778605004?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+</div>
+</section>
+<section data-cat="cadernos--planners-e-agendas">
+<h2>Cadernos, planners e agendas</h2>
+<div class="grid">
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_656615-MLU74990909046_032024-F.jpg" alt="Caderno Pontilhado 80fls Médio Soho Tilibra" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caderno Pontilhado 80fls Médio Soho Tilibra</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 74,90</div>
+    <div class="tags"><span class="tag star">Tilibra</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5674752164?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><span class="off">-10%</span><img src="https://http2.mlstatic.com/D_NQ_NP_902362-MLA93093142696_092025-F.jpg" alt="Caderno Pontilhado Costurado Cambridge Fitto 80 Folhas" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caderno Pontilhado Costurado Cambridge Fitto 80 Folhas</div>
+    <div class="old">R$ 84,84</div>
+    <div class="price">R$ 76,35</div>
+    <div class="tags"><span class="tag star">Tilibra</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-3637523857?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><span class="off">-5%</span><img src="https://http2.mlstatic.com/D_NQ_NP_715954-MLA111409902766_052026-F.jpg" alt="Kit 2 Agenda 2027 Pepper Espiral Preta Tilibra 11,7x16,4cm Preto Agenda Pepper Tilibra 2027" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit 2 Agenda 2027 Pepper Espiral Preta Tilibra 11,7x16,4cm Preto Agenda Pepper Tilibra 2027</div>
+    <div class="old">R$ 47,67</div>
+    <div class="price">R$ 45,28</div>
+    <div class="tags"><span class="tag ok">MercadoLíder Platinum</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4902948671?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><span class="off">-3%</span><img src="https://http2.mlstatic.com/D_NQ_NP_769822-MLA111790658204_062026-F.jpg" alt="Kit 4 Agenda 2027 Pepper Espiral Preta Tilibra 11,7x16,4cm Preto Agenda Pepper Tilibra 2027" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit 4 Agenda 2027 Pepper Espiral Preta Tilibra 11,7x16,4cm Preto Agenda Pepper Tilibra 2027</div>
+    <div class="old">R$ 77,00</div>
+    <div class="price">R$ 75,00</div>
+    <div class="tags"><span class="tag ok">MercadoLíder Platinum</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4902886139?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_644400-MLU77244815526_072024-F.jpg" alt="Caderno Pontilhado (a5) 14.5 X 21 Cm Leuchtturm1917 Rosa" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caderno Pontilhado (a5) 14.5 X 21 Cm Leuchtturm1917 Rosa</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 238,00</div>
+    <div class="tags"><span class="tag star">LEUCHTTURM1917</span><span class="tag ok">MercadoLíder Platinum</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4734386649?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_985328-MLU77459959127_072024-F.jpg" alt="Caderno Pontilhado (A5) 14.5 x 21 cm Leuchtturm1917 Lilás" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caderno Pontilhado (A5) 14.5 x 21 cm Leuchtturm1917 Lilás</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 239,40</div>
+    <div class="tags"><span class="tag star">LEUCHTTURM1917</span><span class="tag ok">MercadoLíder Platinum</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-7457680420?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_941754-MLA116765558271_082026-F.jpg" alt="Agenda 2027 Tilibra Nápoli Espiral" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Agenda 2027 Tilibra Nápoli Espiral</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 37,50</div>
+    <div class="tags"><span class="tag star">tilibra NAPOLI</span><span class="tag ok">Boa reputação</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-7648109050?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_911381-MLA116272445888_092026-F.jpg" alt="Caderno Criativo Argolado Cicero Pautado 17x24cm Coral Coral" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caderno Criativo Argolado Cicero Pautado 17x24cm Coral Coral</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 148,20</div>
+    <div class="tags"><span class="tag star">Cicero</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5246512669?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_667872-MLA113248452469_062026-F.jpg" alt="Caderno Criativo Argolado Trancoso Pautado 17x24 Azul Azul-turquesa" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caderno Criativo Argolado Trancoso Pautado 17x24 Azul Azul-turquesa</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 148,20</div>
+    <div class="tags"><span class="tag star">Cicero</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5236128813?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_771252-MLA99557494096_122025-F.jpg" alt="Caderno Criativo Argolado Pautado 17x24 Pastel Block Cicero" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caderno Criativo Argolado Pautado 17x24 Pastel Block Cicero</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 154,40</div>
+    <div class="tags"><span class="tag star">Cicero</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5799675620?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_907018-MLA95657067255_102025-F.jpg" alt="Caderno Criativo Argolado Lagoa 17x24 Cisne Floral Verde" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caderno Criativo Argolado Lagoa 17x24 Cisne Floral Verde</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 189,90</div>
+    <div class="tags"><span class="tag star">Cicero</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-7753110964?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_683607-MLA99455309464_112025-F.jpg" alt="Caderno Criativo Argolado 17x24 Pautado Eclipse Preto Cicero Astral" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caderno Criativo Argolado 17x24 Pautado Eclipse Preto Cicero Astral</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 189,90</div>
+    <div class="tags"><span class="tag star">Cicero</span><span class="tag ok">Loja oficial</span><span class="tag">Frete grátis</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5337717017?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+</div>
+</section>
+<section data-cat="canetas-e-lettering">
+<h2>Canetas e lettering</h2>
+<div class="grid">
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_779963-MLU78495413840_082024-F.jpg" alt="Caneta Brush Pen Stabilo PEN 68 BRUSH Ponta Pincel" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caneta Brush Pen Stabilo PEN 68 BRUSH Ponta Pincel</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 15,90</div>
+    <div class="tags"><span class="tag star">Stabilo</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4403373049?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_600461-MLA112403225525_052026-F.jpg" alt="Caneta Brush Sign Pen - Pentel Tinta Azul" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caneta Brush Sign Pen - Pentel Tinta Azul</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 16,70</div>
+    <div class="tags"><span class="tag star">Pentel</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-7589005652?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_905924-MLA100065628475_122025-F.jpg" alt="Caneta Brush Sign Pen Laranja Fluorescente - Pentel" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caneta Brush Sign Pen Laranja Fluorescente - Pentel</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 16,74</div>
+    <div class="tags"><span class="tag star">Pentel</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4025124625?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_906290-MLA99587795022_122025-F.jpg" alt="Caneta Fineliner Staedtler 0.3mm Tinta Cor Areia Triangular" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caneta Fineliner Staedtler 0.3mm Tinta Cor Areia Triangular</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 17,65</div>
+    <div class="tags"><span class="tag star">Staedtler</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4457801686?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_631102-MLA99481402098_112025-F.jpg" alt="Caneta Brush Sign Pen Cor Laranja 1 Unidade Pentel" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caneta Brush Sign Pen Cor Laranja 1 Unidade Pentel</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 18,59</div>
+    <div class="tags"><span class="tag star">Pentel</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-3925254444?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_668694-MLU73673341187_122023-F.jpg" alt="Pentel Caneta Brush Sign Pen Cor Lilás 1 Unidade" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Pentel Caneta Brush Sign Pen Cor Lilás 1 Unidade</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 18,59</div>
+    <div class="tags"><span class="tag star">Pentel</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-3554556823?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_902093-MLA99451127804_112025-F.jpg" alt="Caneta Brush Pentel Sign Pen Touch Violeta Azulado" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caneta Brush Pentel Sign Pen Touch Violeta Azulado</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 18,59</div>
+    <div class="tags"><span class="tag star">Pentel</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4191948018?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_926931-MLA115919061639_082026-F.jpg" alt="Caneta Brush Pen 68 Verde Claro 568/43 Stabilo" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caneta Brush Pen 68 Verde Claro 568/43 Stabilo</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 21,90</div>
+    <div class="tags"><span class="tag star">Stabilo</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-7608345618?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_822541-MLA99507194098_112025-F.jpg" alt="Caneta Brush Sign Pen Pigment Marcação Preto" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caneta Brush Sign Pen Pigment Marcação Preto</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 23,48</div>
+    <div class="tags"><span class="tag star">Pentel</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-7317381300?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_665512-MLA111245928800_052026-F.jpg" alt="Marca Texto Stabilo Boss Stabilo Verde Pastel" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Marca Texto Stabilo Boss Stabilo Verde Pastel</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 30,11</div>
+    <div class="tags"><span class="tag star">Stabilo</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-5233505261?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_890888-MLU72042586812_102023-F.jpg" alt="Kit Canetas Fine Pen Faber-Castell com 6 Cores Pastel" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Kit Canetas Fine Pen Faber-Castell com 6 Cores Pastel</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 44,90</div>
+    <div class="tags"><span class="tag star">Faber-Castell</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4504275839?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+<article class="card">
+  <div class="img"><img src="https://http2.mlstatic.com/D_NQ_NP_718152-MLA99462598600_112025-F.jpg" alt="Caneta Fineliner Staedtler Triplus 334 0.3mm 6 Cores Variadas" loading="lazy"></div>
+  <div class="body">
+    <div class="title">Caneta Fineliner Staedtler Triplus 334 0.3mm 6 Cores Variadas</div>
+    <div class="old" aria-hidden="true">&nbsp;</div>
+    <div class="price">R$ 49,90</div>
+    <div class="tags"><span class="tag star">Staedtler</span><span class="tag ok">Loja oficial</span></div>
+    <a class="btn" href="https://produto.mercadolivre.com.br/MLB-4577778087?matt_tool=22937192&amp;matt_word=especial" target="_blank" rel="sponsored nofollow noopener">Ver no Mercado Livre</a>
+  </div>
+</article>
+</div>
+</section>
+</main>
+<footer>
+  Como participante do programa de afiliados do Mercado Livre, este site pode receber comissão por compras feitas pelos links, sem custo adicional para você. Preços, estoque e condições são do Mercado Livre e podem mudar a qualquer momento; confira sempre na página do produto antes de comprar.
+</footer>
+<script>
+  var tabs = document.getElementById('tabs');
+  tabs.addEventListener('click', function(e){
+    var b = e.target.closest('.tab'); if(!b) return;
+    var cat = b.getAttribute('data-cat');
+    tabs.querySelectorAll('.tab').forEach(function(t){ t.setAttribute('aria-pressed', t===b ? 'true':'false'); });
+    document.querySelectorAll('main section').forEach(function(s){
+      s.hidden = !(cat==='todas' || s.getAttribute('data-cat')===cat);
+    });
+  });
+</script>
+</body>
+</html>
