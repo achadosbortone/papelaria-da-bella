@@ -1,0 +1,195 @@
+{
+  "titulo": "Papelaria da Bella",
+  "subtitulo": "Pintura, scrapbook, adesivos, cadernos e garrafinhas: marcas de confiança, lojas bem avaliadas e o menor preço do Mercado Livre. Atualizado todos os dias.",
+  "afiliado": {
+    "matt_tool": "",
+    "matt_word": ""
+  },
+  "filtros": {
+    "qualidade": "marcas",
+    "incluir_outras_marcas": false,
+    "niveis_aceitos": [
+      "platinum",
+      "gold",
+      "verde"
+    ],
+    "aceitar_loja_oficial": true,
+    "exigir_promocao": false,
+    "desconto_minimo": 8,
+    "itens_por_categoria": 12,
+    "resultados_por_busca": 50,
+    "produtos_analisados_por_categoria": 100,
+    "ofertas_examinadas": 30,
+    "candidatos_por_categoria": 30
+  },
+  "categorias": [
+    {
+      "nome": "Pintura e arte",
+      "preco_min": 25,
+      "buscas": [
+        "tinta acrilica kit",
+        "aquarela profissional",
+        "pincel artistico kit",
+        "tela para pintura",
+        "marcador artistico alcool",
+        "lapis de cor profissional"
+      ],
+      "marcas_premium": [
+        "Winsor & Newton",
+        "Faber-Castell",
+        "Canson",
+        "Liquitex",
+        "Sakura",
+        "Copic",
+        "Derwent",
+        "Caran d'Ache",
+        "Staedtler",
+        "Royal Talens",
+        "Van Gogh",
+        "Tombow",
+        "Pentel"
+      ],
+      "marcas_confiaveis": [
+        "Acrilex",
+        "Corfix",
+        "Brw",
+        "Mont Marte",
+        "Arteza",
+        "Koh-I-Noor",
+        "Reeves",
+        "Pebeo",
+        "Tris",
+        "Cis",
+        "Leonora",
+        "Zig",
+        "Kuretake"
+      ]
+    },
+    {
+      "nome": "Scrapbook e papéis",
+      "preco_min": 20,
+      "buscas": [
+        "kit scrapbook",
+        "papel scrapbook decorado",
+        "carimbo scrapbook",
+        "perfurador de papel decorativo",
+        "papel de arte colorido",
+        "tesoura decorativa"
+      ],
+      "marcas_premium": [],
+      "marcas_confiaveis": []
+    },
+    {
+      "nome": "Adesivos e washi tape",
+      "preco_min": 8,
+      "buscas": [
+        "adesivos para caderno",
+        "washi tape kit",
+        "cartela de adesivos",
+        "stickers vinil",
+        "adesivos para planner"
+      ],
+      "marcas_premium": [],
+      "marcas_confiaveis": []
+    },
+    {
+      "nome": "Garrafinhas e copos",
+      "preco_min": 40,
+      "buscas": [
+        "garrafa termica",
+        "garrafa inox com canudo",
+        "copo termico com tampa",
+        "garrafa squeeze 1 litro",
+        "garrafa de agua motivacional"
+      ],
+      "marcas_premium": [
+        "Stanley",
+        "Hydro Flask",
+        "Thermos",
+        "Yeti",
+        "Contigo",
+        "Owala",
+        "CamelBak",
+        "Nalgene"
+      ],
+      "marcas_confiaveis": [
+        "Termolar",
+        "Tupperware",
+        "Lock&Lock",
+        "Soprano",
+        "Brinox",
+        "Tramontina",
+        "Mor",
+        "Invicta",
+        "Sanremo",
+        "Hermetic"
+      ]
+    },
+    {
+      "nome": "Cadernos, planners e agendas",
+      "preco_min": 25,
+      "buscas": [
+        "caderno criativo",
+        "planner",
+        "caderno pontilhado bullet journal",
+        "agenda 2027",
+        "sketchbook caderno de desenho"
+      ],
+      "marcas_premium": [
+        "Moleskine",
+        "Leuchtturm1917",
+        "Faber-Castell",
+        "Canson",
+        "Tilibra",
+        "Pentel"
+      ],
+      "marcas_confiaveis": [
+        "Foroni",
+        "Credeal",
+        "Jandaia",
+        "São Domingos",
+        "Cícero",
+        "Fina Ideia",
+        "Dac",
+        "Leonora",
+        "Maped",
+        "Molin"
+      ]
+    },
+    {
+      "nome": "Canetas e lettering",
+      "preco_min": 15,
+      "buscas": [
+        "caneta brush pen lettering",
+        "kit canetas gel colorida",
+        "marca texto pastel",
+        "caneta fineliner",
+        "canetas coloridas ponta fina"
+      ],
+      "marcas_premium": [
+        "Pilot",
+        "Stabilo",
+        "Tombow",
+        "Pentel",
+        "Sakura",
+        "Zebra",
+        "Staedtler",
+        "Faber-Castell",
+        "Uni",
+        "Mitsubishi",
+        "Sharpie"
+      ],
+      "marcas_confiaveis": [
+        "Bic",
+        "Compactor",
+        "Molin",
+        "Cis",
+        "Brw",
+        "Tris",
+        "Newpen",
+        "Zig",
+        "Kuretake"
+      ]
+    }
+  ]
+}
